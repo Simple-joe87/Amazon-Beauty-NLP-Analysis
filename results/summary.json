@@ -1,0 +1,33 @@
+{
+  "counts": {
+    "total": 701528,
+    "low_rated": 145114,
+    "low_rated_short": 33451,
+    "eligible": 111506,
+    "empty_text": 720,
+    "duplicate_eligible_text": 1326,
+    "unique_eligible": 110180
+  },
+  "ratings": {
+    "5.0": 420726,
+    "4.0": 79381,
+    "1.0": 102080,
+    "3.0": 56307,
+    "2.0": 43034
+  },
+  "sample_size": 10000,
+  "random_seed": 42,
+  "vocabulary_count": 5000,
+  "vocabulary_tfidf": 5000,
+  "count_matrix_shape": [
+    10000,
+    5000
+  ],
+  "tfidf_matrix_shape": [
+    10000,
+    5000
+  ],
+  "lda_perplexity": 1584.2853574962442,
+  "nmf_reconstruction_error": 97.36866679690615,
+  "note": "Model-specific metrics are not directly comparable; manually inspect topics and representative documents."
+}
