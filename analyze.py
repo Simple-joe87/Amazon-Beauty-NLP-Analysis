@@ -8,10 +8,15 @@ from sklearn.decomposition import LatentDirichletAllocation, NMF
 
 SEED=42
 STOP = sorted(set(ENGLISH_STOP_WORDS)-{'not','no','never'})
+
 def clean(s):
-    s=re.sub(r'https?://\S+|www\.\S+',' ',s.lower())
-    s=re.sub(r'[^a-z\s\']',' ',s)
-    return re.sub(r'\s+',' ',s).strip()
+    s = re.sub(r"<[^>]+>", " ", str(s))
+    s = re.sub(r"&[a-zA-Z]+;", " ", s)
+    s = re.sub(r"https?://\S+|www\.\S+", " ", s)
+    s = s.lower()
+    s = re.sub(r"[^a-z\s']", " ", s)
+    s = re.sub(r"\bbr\b", " ", s)
+    return re.sub(r"\s+", " ", s).strip()
 def main():
     p=argparse.ArgumentParser(); p.add_argument('--input',default='All_Beauty.jsonl');p.add_argument('--output',default='results');p.add_argument('--sample',type=int,default=10000); a=p.parse_args()
     out=Path(a.output);out.mkdir(parents=True,exist_ok=True)

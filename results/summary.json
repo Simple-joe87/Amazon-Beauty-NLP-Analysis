@@ -27,7 +27,7 @@
     10000,
     5000
   ],
-  "lda_perplexity": 1584.2853574962442,
-  "nmf_reconstruction_error": 97.36866679690615,
+  "lda_perplexity": 1628.661729696808,
+  "nmf_reconstruction_error": 97.45087631924825,
   "note": "Model-specific metrics are not directly comparable; manually inspect topics and representative documents."
 }
